@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../rest-api"
+		},
+		{
+			"name": "rest-api",
+			"path": "../rest-api/rest-api"
+		}
+	],
+	"settings": {}
+}
