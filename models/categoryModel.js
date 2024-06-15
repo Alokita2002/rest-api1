@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
+const {BASE_URL} = require("../config");
 
 const categorySchema = new Schema({
 
@@ -8,11 +9,14 @@ const categorySchema = new Schema({
 
     description: { type:String },
 
-    thumbnail: { type:String}
+    thumbnail: { type:String , get:(thumbnail)=>{
+        return `${BASE_URL}${thumbnail}`
+    }}
 
 },
 {
     timestamps:true,
+    toJSON:{getters: true},
 }
     
 );
